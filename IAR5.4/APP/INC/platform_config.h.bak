@@ -1,0 +1,230 @@
+/******************** (C) COPYRIGHT 2009 STMicroelectronics ********************
+* File Name          : platform_config.h
+* Author             : MCD Application Team
+* Version            : V3.0.1
+* Date               : 04/27/2009
+* Description        : Evaluation board specific configuration file.
+********************************************************************************
+* THE PRESENT FIRMWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS
+* WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE TIME.
+* AS A RESULT, STMICROELECTRONICS SHALL NOT BE HELD LIABLE FOR ANY DIRECT,
+* INDIRECT OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING FROM THE
+* CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE CODING
+* INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
+*******************************************************************************/
+
+/* Define to prevent recursive inclusion -------------------------------------*/
+#ifndef __PLATFORM_CONFIG_H
+#define __PLATFORM_CONFIG_H
+
+/* Includes ------------------------------------------------------------------*/
+#include <stdio.h>
+/* Exported types ------------------------------------------------------------*/
+/* Exported constants --------------------------------------------------------*/
+#define NOP()                                asm ("nop")
+//#define USB_DISCONNECT                      GPIOB  
+//#define USB_DISCONNECT_PIN                  GPIO_Pin_1
+//#define RCC_APB2Periph_GPIO_DISCONNECT      RCC_APB2Periph_GPIOC
+
+//#define RCC_APB2Periph_GPIO_KEY             RCC_APB2Periph_GPIOG
+//#define RCC_APB2Periph_GPIO_TAMPER          RCC_APB2Periph_GPIOC
+//#define RCC_APB2Periph_GPIO_IOAIN           RCC_APB2Periph_GPIOC
+//#define RCC_APB2Periph_GPIO_LED             RCC_APB2Periph_GPIOF
+
+//#define GPIO_KEY                            GPIOG
+//#define GPIO_TAMPER                         GPIOC
+//#define GPIO_IOAIN                          GPIOC
+//#define GPIO_LED                            GPIOF
+
+//#define GPIO_KEY_PIN                        GPIO_Pin_8   /* PG.08 */
+//#define GPIO_TAMPER_PIN                     GPIO_Pin_13  /* PC.13 */
+//#define GPIO_IOAIN_PIN                      GPIO_Pin_4   /* PC.04 */
+  
+//#define GPIO_LED1_PIN                       GPIO_Pin_6   /* PF.06 */
+//#define GPIO_LED2_PIN                       GPIO_Pin_7   /* PF.07 */ 
+//#define GPIO_LED3_PIN                       GPIO_Pin_8   /* PF.08 */
+//#define GPIO_LED4_PIN                       GPIO_Pin_9   /* PF.09 */ 
+
+
+//LED CONTROL
+#define LED_ctrl_7                       GPIO_Pin_1   //PG1
+#define LED_ctrl_6                       GPIO_Pin_2   //PG2
+#define LED_ctrl_5                       GPIO_Pin_3   //PG3
+#define LED_ctrl_4                       GPIO_Pin_4   //PG4
+#define LED_ctrl_3                       GPIO_Pin_5   //PG5
+#define LED_ctrl_2                       GPIO_Pin_6   //PG6
+#define LED_ctrl_1                       GPIO_Pin_7   //PG7
+#define LED_ctrl_0                       GPIO_Pin_8   //PG8 
+
+#define LED_ctrl_A0                      GPIO_Pin_7   //PC7
+#define LED_ctrl_A1                      GPIO_Pin_8   //PC8
+#define LED_ctrl_A2                      GPIO_Pin_9   //PC9
+#define LED_ctrl_A3                      GPIO_Pin_8   //PA8
+#define LED_ctrl_A4                      GPIO_Pin_9   //PA9
+#define LED_ctrl_A5                      GPIO_Pin_10  //PA10
+#define LED_ctrl_A6                      GPIO_Pin_11  //PA11
+#define LED_ctrl_A7                      GPIO_Pin_12  //PA12
+
+#define LED_alarm_ON_ctrl                GPIO_Pin_6  //PD6
+#define LED_alarm_OFF_ctrl               GPIO_Pin_7  //PD7
+
+#define Gate_LED_ctrl0                   GPIO_Pin_8  //PD8
+#define Gate_LED_ctrl1                   GPIO_Pin_9  //PD9
+#define Gate_LED_ctrl2                   GPIO_Pin_10 //PD10
+#define Gate_LED_ctrl3                   GPIO_Pin_11 //PD11
+#define Gate_LED_ctrl4                   GPIO_Pin_12 //PD12
+#define Gate_LED_ctrl5                   GPIO_Pin_13 //PD13                  
+
+
+//#define GPIO_KEY_PORTSOURCE                 GPIO_PortSourceGPIOG
+//#define GPIO_KEY_PINSOURCE                  GPIO_PinSource8
+//#define GPIO_KEY_EXTI_Line                  EXTI_Line8
+
+//#define GPIO_TAMPER_PORTSOURCE              GPIO_PortSourceGPIOC
+//#define GPIO_TAMPER_PINSOURCE               GPIO_PinSource13
+//#define GPIO_TAMPER_EXTI_Line               EXTI_Line13
+
+//#define ADC_AIN_CHANNEL                     ADC_Channel_14
+
+//IR CONTROL
+#define IR_LED_PWM                         GPIO_Pin_0//PB0
+#define IR_status_in_A                     GPIO_Pin_1//PB1
+#define IR_status_in_B                     GPIO_Pin_5//PB5
+
+//I2C
+#define SCL                                GPIO_Pin_8//PB8
+#define SDA                                GPIO_Pin_9//PB9
+
+//Buzzer
+#define Buzzer_CTRL0                       GPIO_Pin_10//PC10
+#define Buzzer_CTRL1                       GPIO_Pin_11//PC11
+
+//RS485
+#define RS485_TXD                          GPIO_Pin_12//PC12
+#define RS485_RXD                          GPIO_Pin_2//PD2
+#define RS485_CTRL                         GPIO_Pin_3//PD3
+
+//LCD CONTROL
+#define FSMC_nOE                           GPIO_Pin_4//PD4
+#define FSMC_nWE                           GPIO_Pin_5//PD5
+#define FSMC_nE2                           GPIO_Pin_9//PG9
+#define FSMC_A0                            GPIO_Pin_0//PF0
+#define Detect_en_control                  GPIO_Pin_14//PE14
+#define LCD_nRST                           GPIO_Pin_15//PE15
+
+#define FSMC_D0                            GPIO_Pin_14//PD14
+#define FSMC_D1                            GPIO_Pin_15//PD15
+#define FSMC_D2                            GPIO_Pin_0 //PD0
+#define FSMC_D3                            GPIO_Pin_1 //PD1
+#define FSMC_D4                            GPIO_Pin_7 //PE7
+#define FSMC_D5                            GPIO_Pin_8 //PE8
+#define FSMC_D6                            GPIO_Pin_9 //PE9
+#define FSMC_D7                            GPIO_Pin_10//PE10
+
+//KEY CONTROL
+#define key_B                              GPIO_Pin_6//PE6
+#define key_C                              GPIO_Pin_5//PE5
+#define key_D                              GPIO_Pin_4//PE4
+
+//POWER RELAY CONTROL
+#define power_Relay_ctrl                   GPIO_Pin_3//PE3
+
+//OSC RELAY CONTROL
+#define OSC_Relay_Ctrl0                   GPIO_Pin_11//PF11
+#define OSC_Relay_Ctrl1                   GPIO_Pin_12//PF12
+#define OSC_Relay_Ctrl2                   GPIO_Pin_13//PF13
+#define OSC_Relay_Ctrl3                   GPIO_Pin_14//PF14
+#define OSC_Relay_Ctrl4                   GPIO_Pin_15//PF15
+#define OSC_Relay_Ctrl5                   GPIO_Pin_0 //PG0
+
+//JTAG
+#define CPU_TDO                           GPIO_Pin_3 //PB3
+#define JTAG_nRST                         GPIO_Pin_4 //PB4
+#define CPU_TMS                           GPIO_Pin_13//PA13
+#define CPU_TCK                           GPIO_Pin_14//PA14
+#define CPU_TDI                           GPIO_Pin_15//PA15
+
+
+
+
+
+// Poll the status of flags in a register
+//#define ISSET(Register, flags)      (((Register) & (flags)) == (flags))
+//#define ISCLEARED(Register, flags)  (((Register) & (flags)) == 0)
+//touch define
+/*#define GPIO_AD7843_nCS                          GPIO_Pin_12 //PB12
+#define GPIO_AD7843_DCLK                         GPIO_Pin_13 //PB13
+#define GPIO_AD7843_DIN                          GPIO_Pin_15 //PB15
+#define GPIO_AD7843_DOUT                         GPIO_Pin_14 //PB14
+#define GPIO_AD7843_BUSY                         GPIO_Pin_9  //PB09
+#define GPIO_AD7843_nINT                         GPIO_Pin_8  //PB08
+#define GPIO_AD7843_nINT_PORTSOURCE              GPIO_PortSourceGPIOB
+#define GPIO_AD7843_nINT_PINSOURCE               GPIO_PinSource8
+#define GPIO_AD7843_nINT_EXTI_Line               EXTI_Line8	*/
+
+//ADC
+#define key_power_on_off                         GPIO_Pin_0//PA0
+#define coil_sig_adc0                            GPIO_Pin_1//PA1
+#define coil_sig_adc1                            GPIO_Pin_2//PA2
+#define coil_sig_adc2                            GPIO_Pin_3//PA3
+#define coil_sig_adc3                            GPIO_Pin_4//PA4
+#define coil_sig_adc4                            GPIO_Pin_5//PA5
+#define coil_sig_adc5                            GPIO_Pin_6//PA6
+#define coil_sig_adc6                            GPIO_Pin_0//PC0
+#define coil_sig_adc7                            GPIO_Pin_1//PC1
+#define coil_sig_adc8                            GPIO_Pin_2//PC2
+#define coil_sig_adc9                            GPIO_Pin_3//PC3
+#define coil_sig_adc10                           GPIO_Pin_4//PC4
+#define coil_sig_adc11                           GPIO_Pin_5//PC5
+
+
+// IIC define 
+#define I2C1_SCL                                 GPIO_Pin_6 // PB10
+#define I2C1_SDA                                 GPIO_Pin_7 // PB11
+#define I2C2_SCL                                 GPIO_Pin_10 // PB10
+#define I2C2_SDA                                 GPIO_Pin_11 // PB11
+
+// SPI define
+#define SPI2_nCS                  GPIO_Pin_12 // PB12
+#define SPI2_SCLK                 GPIO_Pin_13 // PB13
+#define SPI2_MISO                 GPIO_Pin_14 // PB14
+#define SPI2_MOSI                 GPIO_Pin_15 // PB15
+
+//T101 define
+#define GPIO_T101_RESET_PIN                      GPIO_Pin_7 //PG7
+#define GPIO_T101_RESET                          GPIOG
+
+//LCD define
+#define GPIO_LCD_BlackLight_PIN                  GPIO_Pin_7 //PD7
+#define GPIO_LCD_BlackLight                      GPIOD 
+#define SPI1_LCD_CSB                             GPIO_Pin_4 // PA4
+#define SPI1_LCD_SCL                             GPIO_Pin_5 // PA5
+#define SPI1_LCD_SDA                             GPIO_Pin_7 // PA5
+#define GPIO_LCD_SPI1                            GPIOA
+
+//ADC pin denfine
+#define High_CH_ADC                              GPIO_Pin_0 // PA0
+#define Low_CH_ADC                               GPIO_Pin_1 // PA1
+#define GPIO_ADC                                 GPIOA
+
+//channel select IO define
+#define CH_SEL_CTRL0                            GPIO_Pin_0  // PC0
+#define CH_SEL_CTRL1                            GPIO_Pin_1  // PC1
+#define CH_SEL_CTRL2                            GPIO_Pin_2  // PC2
+#define CH_SEL_CTRL3                            GPIO_Pin_3  // PC3
+#define CH_SEL_CTRL4                            GPIO_Pin_4  // PC4
+#define CH_SEL_CTRL5                            GPIO_Pin_5  // PC5
+#define CH_SEL_CTRL6                            GPIO_Pin_6  // PC6
+#define GPIO_CH_CTRL                            GPIOC
+
+#define INTERAL_CRTL                            GPIO_Pin_7  // PC7
+#define GPIO_INTERAL_CTRL                       GPIOC
+	
+/* End My project define------------------------------------------------------*/
+/* Exported macro ------------------------------------------------------------*/
+/* Exported functions ------------------------------------------------------- */
+
+#endif /* __PLATFORM_CONFIG_H */
+
+/******************* (C) COPYRIGHT 2009 STMicroelectronics *****END OF FILE****/
+

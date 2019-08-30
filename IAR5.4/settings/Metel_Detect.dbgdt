@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Project>
+  <Desktop>
+    <Static>
+      <Debug-Log>
+        
+        
+      <PreferedWindows><Position>3</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows><Window><Factory>Build</Factory></Window></Windows></PreferedWindows><ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1219</ColumnWidth1></Debug-Log>
+      <Build>
+        <ColumnWidth0>20</ColumnWidth0>
+        <ColumnWidth1>914</ColumnWidth1>
+        <ColumnWidth2>243</ColumnWidth2>
+        <ColumnWidth3>60</ColumnWidth3>
+      <PreferedWindows><Position>3</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows><Window><Factory>Debug-Log</Factory></Window></Windows></PreferedWindows></Build>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>176</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Disassembly>
+        
+        
+        
+      <PreferedWindows><Position>2</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows><MixedMode>1</MixedMode><CodeCovShow>0</CodeCovShow><InstrProfShow>0</InstrProfShow></Disassembly>
+    <Watch><Format><struct_types/><watch_formats><Fmt><Key>{W}Watch-0:ADC_DualConvertedValueTab</Key><Value>4</Value><ShowAs>6</ShowAs></Fmt></watch_formats></Format><Column0>274</Column0><Column1>100</Column1><Column2>100</Column2><Column3>100</Column3></Watch><Auto><Column0>160</Column0><Column1>100</Column1><Column2>100</Column2><Column3>100</Column3></Auto><Register/><Find-in-Files><ColumnWidth0>441</ColumnWidth0><ColumnWidth1>63</ColumnWidth1><ColumnWidth2>757</ColumnWidth2></Find-in-Files></Static>
+    <Windows>
+      
+      
+      
+    <Wnd4>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-17897-1623</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>Metel_Detect</ExpandedNode><ExpandedNode>Metel_Detect/APP</ExpandedNode><ExpandedNode>Metel_Detect/APP/main.c</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd4><Wnd5><Tabs><Tab><Identity>TabID-10846-7565</Identity><TabName>Auto</TabName><Factory>Auto</Factory><Session><Column0>160</Column0><Column1>100</Column1><Column2>100</Column2><Column3>100</Column3></Session></Tab><Tab><Identity>TabID-13474-20170</Identity><TabName>Watch</TabName><Factory>Watch</Factory><Session><Expressions><Expression><Expression>ADC_DualConvertedValueTab</Expression></Expression></Expressions><TabId>0</TabId><Column0>274</Column0><Column1>100</Column1><Column2>100</Column2><Column3>100</Column3></Session></Tab></Tabs><SelectedTab>1</SelectedTab></Wnd5><Wnd6><Tabs><Tab><Identity>TabID-25505-9132</Identity><TabName>Register</TabName><Factory>Register</Factory><Session><State1>FSMC_PCR2</State1><REG1>0</REG1><REG2>0</REG2><Group>10</Group><States>1</States><State0>FSMC_BCR2</State0></Session></Tab></Tabs><SelectedTab>0</SelectedTab></Wnd6><Wnd7><Tabs><Tab><Identity>TabID-6685-9485</Identity><TabName>Debug Log</TabName><Factory>Debug-Log</Factory><Session/></Tab><Tab><Identity>TabID-13585-27314</Identity><TabName>Find in Files</TabName><Factory>Find-in-Files</Factory><Session/></Tab></Tabs><SelectedTab>0</SelectedTab></Wnd7></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\APP\INC\hw_config.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\APP\SRC\lcd.c</Filename><XPos>0</XPos><YPos>15</YPos><SelStart>333</SelStart><SelEnd>1927</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h</Filename><XPos>0</XPos><YPos>445</YPos><SelStart>18928</SelStart><SelEnd>18940</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\APP\INC\platform_config.h</Filename><XPos>0</XPos><YPos>68</YPos><SelStart>4074</SelStart><SelEnd>4074</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\APP\SRC\PWM.c</Filename><XPos>0</XPos><YPos>6</YPos><SelStart>1375</SelStart><SelEnd>1405</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\APP\INC\PWM.h</Filename><XPos>0</XPos><YPos>1</YPos><SelStart>1330</SelStart><SelEnd>1330</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\APP\SRC\USART.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>3414</SelStart><SelEnd>3425</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Cortex-M3\stm32f10x.h</Filename><XPos>0</XPos><YPos>189</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\APP\SRC\Delay.c</Filename><XPos>0</XPos><YPos>8</YPos><SelStart>1509</SelStart><SelEnd>1509</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c</Filename><XPos>0</XPos><YPos>284</YPos><SelStart>9233</SelStart><SelEnd>9243</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\APP\SRC\hw_config.c</Filename><XPos>0</XPos><YPos>100</YPos><SelStart>6244</SelStart><SelEnd>6244</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\APP\INC\lcd.h</Filename><XPos>0</XPos><YPos>161</YPos><SelStart>7329</SelStart><SelEnd>7329</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.c</Filename><XPos>0</XPos><YPos>572</YPos><SelStart>23265</SelStart><SelEnd>23265</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\APP\SRC\main.c</Filename><XPos>0</XPos><YPos>113</YPos><SelStart>3543</SelStart><SelEnd>3543</SelEnd></Tab><ActiveTab>13</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\APP\SRC\EEPROM.c</Filename><XPos>0</XPos><YPos>578</YPos><SelStart>16861</SelStart><SelEnd>16861</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\APP\INC\EEPROM.h</Filename><XPos>0</XPos><YPos>6</YPos><SelStart>1338</SelStart><SelEnd>1354</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\APP\SRC\ADC_Sample.c</Filename><XPos>0</XPos><YPos>153</YPos><SelStart>7325</SelStart><SelEnd>7325</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-00b2b0e0><key>iaridepm.enu1</key></Toolbar-00b2b0e0></Sizes></Row0><Row1><Sizes><Toolbar-03e4fce0><key>debuggergui.enu1</key></Toolbar-03e4fce0></Sizes></Row1></Top><Left><Row0><Sizes><Wnd4><Rect><Top>-2</Top><Left>-2</Left><Bottom>646</Bottom><Right>269</Right><x>-2</x><y>-2</y><xscreen>200</xscreen><yscreen>200</yscreen><sizeHorzCX>156250</sizeHorzCX><sizeHorzCY>211864</sizeHorzCY><sizeVertCX>211719</sizeVertCX><sizeVertCY>686441</sizeVertCY></Rect></Wnd4></Sizes></Row0></Left><Right><Row0><Sizes><Wnd5><Rect><Top>-2</Top><Left>-2</Left><Bottom>646</Bottom><Right>393</Right><x>-2</x><y>-2</y><xscreen>200</xscreen><yscreen>200</yscreen><sizeHorzCX>156250</sizeHorzCX><sizeHorzCY>211864</sizeHorzCY><sizeVertCX>308594</sizeVertCX><sizeVertCY>686441</sizeVertCY></Rect></Wnd5></Sizes></Row0></Right><Bottom><Row0><Sizes><Wnd6><Rect><Top>-2</Top><Left>-2</Left><Bottom>198</Bottom><Right>1282</Right><x>-2</x><y>-2</y><xscreen>1284</xscreen><yscreen>200</yscreen><sizeHorzCX>1003125</sizeHorzCX><sizeHorzCY>211864</sizeHorzCY><sizeVertCX>156250</sizeVertCX><sizeVertCY>718220</sizeVertCY></Rect></Wnd6></Sizes></Row0><Row1><Sizes><Wnd7><Rect><Top>196</Top><Left>-2</Left><Bottom>228</Bottom><Right>1282</Right><x>-2</x><y>196</y><xscreen>1284</xscreen><yscreen>32</yscreen><sizeHorzCX>1003125</sizeHorzCX><sizeHorzCY>33898</sizeHorzCY><sizeVertCX>156250</sizeVertCX><sizeVertCY>211864</sizeVertCY></Rect></Wnd7></Sizes></Row1></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Project>
+
+

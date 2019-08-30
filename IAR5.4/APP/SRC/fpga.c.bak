@@ -1,0 +1,93 @@
+/*******************************Copyright (c)***********************************
+**--------------File Info-------------------------------------------------------
+** File name:			    fpga.c
+** Created by:		    Alex Hsu
+** Created date:		  2011-07-19
+**
+*******************************************************************************/
+
+/* Includes ------------------------------------------------------------------*/
+#include "hw_config.h"
+#include "stdio.h"
+#include "stm32f10x.h"
+#include "Delay.h"
+/* Private typedef -----------------------------------------------------------*/
+/* Private define ------------------------------------------------------------*/
+/* Private macro -------------------------------------------------------------*/                              
+/* Private variables ---------------------------------------------------------*/
+
+
+/* Private functions ---------------------------------------------------------*/
+/*******************************************************************************
+* Function Name  : delay
+* Description    : 
+* Input          : None
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void delay()
+{
+  volatile unsigned char i=0x80;
+  while(i--)
+    asm("nop");
+}
+
+
+
+/*******************************************************************************
+* Function Name  : LCD_FSMCConfig
+* Description    : Configures the Parallel interface (FSMC) for LCD(Parallel mode)
+* Input          : None
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void FPGA_FSMCConfig(void)
+{
+	
+  FSMC_NORSRAMInitTypeDef  FSMC_NORSRAMInitStructure;
+  FSMC_NORSRAMTimingInitTypeDef  p;
+	
+	/*-- FSMC Configuration ------------------------------------------------------*/
+	/*----------------------- SRAM Bank 2 ----------------------------------------*/
+  /* FSMC_Bank1_NORSRAM2 configuration */
+  p.FSMC_AddressSetupTime = 7;
+  p.FSMC_AddressHoldTime = 1;
+  p.FSMC_DataSetupTime = 5;
+  p.FSMC_BusTurnAroundDuration = 0;
+  p.FSMC_CLKDivision = 3;
+  p.FSMC_DataLatency = 2;
+  p.FSMC_AccessMode = FSMC_AccessMode_A;
+	
+  /* Color LCD configuration ------------------------------------
+	LCD configured as follow:
+	- Data/Address MUX = Disable
+	- Memory Type = SRAM
+	- Data Width = 8bit
+	- Write Operation = Enable
+	- Extended Mode = Enable
+	- Asynchronous Wait = Disable */
+  FSMC_NORSRAMInitStructure.FSMC_Bank = FSMC_Bank1_NORSRAM2;
+  FSMC_NORSRAMInitStructure.FSMC_DataAddressMux = FSMC_DataAddressMux_Disable;
+  FSMC_NORSRAMInitStructure.FSMC_MemoryType = FSMC_MemoryType_SRAM;
+  FSMC_NORSRAMInitStructure.FSMC_MemoryDataWidth = FSMC_MemoryDataWidth_16b;
+  FSMC_NORSRAMInitStructure.FSMC_BurstAccessMode = FSMC_BurstAccessMode_Disable;
+  FSMC_NORSRAMInitStructure.FSMC_WaitSignalPolarity = FSMC_WaitSignalPolarity_Low;
+  FSMC_NORSRAMInitStructure.FSMC_WrapMode = FSMC_WrapMode_Disable;
+  FSMC_NORSRAMInitStructure.FSMC_WaitSignalActive = FSMC_WaitSignalActive_BeforeWaitState;
+  FSMC_NORSRAMInitStructure.FSMC_WriteOperation = FSMC_WriteOperation_Enable;
+  FSMC_NORSRAMInitStructure.FSMC_WaitSignal = FSMC_WaitSignal_Disable;
+  FSMC_NORSRAMInitStructure.FSMC_ExtendedMode = FSMC_ExtendedMode_Disable;
+  FSMC_NORSRAMInitStructure.FSMC_WriteBurst = FSMC_WriteBurst_Disable;
+  FSMC_NORSRAMInitStructure.FSMC_ReadWriteTimingStruct = &p;
+  FSMC_NORSRAMInitStructure.FSMC_WriteTimingStruct = &p;
+	
+  FSMC_NORSRAMInit(&FSMC_NORSRAMInitStructure);  
+	
+  /* BANK 4 (of NOR/SRAM Bank 1~4) is enabled */
+  FSMC_NORSRAMCmd(FSMC_Bank1_NORSRAM2, ENABLE);
+}
+/*******************************************************************************/
+
+
+
+/******************* (C) COPYRIGHT 2009 MYTech ******END OF FILE***************/
