@@ -28,6 +28,14 @@ void sys_init(void); //ϵͳ��ʼ��
 /* Private function prototypes -----------------------------------------------*/
 /* Private functions ---------------------------------------------------------*/
 
+
+int funAdd(int a, int b)
+{
+  int c;
+  c = a + b;
+  return c;
+}
+
 /*******************************************************************************
 * Function Name  : main
 * Description    :  
