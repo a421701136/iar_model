@@ -48,7 +48,7 @@ int main(void)
   sys_init();     //ϵͳ��ʼ��
 
   Power_Flag = 1;
-
+  printf("I want to leand git by hand not only by eye\n");
   /* Infinite loop */
   while (1)
   {
