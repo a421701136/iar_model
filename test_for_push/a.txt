@@ -1,0 +1,5 @@
+this is a test for push.
+git add a.txt
+git commit -m "add a.txt"
+I have already push to remote repository
+git push origin master
